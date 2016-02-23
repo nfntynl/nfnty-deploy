@@ -92,7 +92,7 @@ CORS_ORIGIN="("
    CORS_ORIGIN=$( echo "$CORS_ORIGIN" | rev | cut -c 2- | rev )
    CORS_ORIGIN="${CORS_ORIGIN})"
 
-  cat <<EOF > ${PROJECT_NGINX_ROOT}/${PROJECT_ROOT_DIR}
+  cat <<EOF > ${PROJECT_NGINX_ROOT}/nginx-site.conf
 
   server {
       listen   80; ## listen for ipv4; this line is default and implied
@@ -163,7 +163,7 @@ EOF
 }
 
 generateWebNginxConfig () {
-  cat <<EOF > ${PROJECT_NGINX_ROOT}/${PROJECT_ROOT_DIR}
+  cat <<EOF > ${PROJECT_NGINX_ROOT}/nginx-site.conf
 
   server {
   listen   80; ## listen for ipv4; this line is default and implied
@@ -215,7 +215,7 @@ generateNodeNginxConfig () {
 
 
 
-  cat <<EOF > ${PROJECT_NGINX_ROOT}/${PROJECT_ROOT_DIR}
+  cat <<EOF > ${PROJECT_NGINX_ROOT}/nginx-site.conf
 
   server {
   listen   80; ## listen for ipv4; this line is default and implied
