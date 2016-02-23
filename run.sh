@@ -282,7 +282,9 @@ cloneRepository() {
   git clone ${GIT_REPO_URL} .
 
   setupNginx
-  chmod -R 777 ${PROJCT_FILES_ROOT}/data
+  mkdir -p $PROJECT_FILES_ROOT/data/cache
+  chmod -R 777 $PROJECT_FILES_ROOT/data
+
 }
 
 #If the GIT_SSH_KEY environment variable has been defined, use that rsa key
